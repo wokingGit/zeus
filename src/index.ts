@@ -19,15 +19,10 @@ export default class Zeus {
   private reportData: IReportData | null;
 
   constructor(options: ZeusOptions = {}) {
-    options = {
-      resourceTiming: true,
-      elementTiming: true,
-      captureError: true,
-    };
     console.log("欢迎进入宙斯监控 V" + this.v);
 
     const logUrl = options.logUrl;
-    if (!logUrl) console.log("❌ 未传递logUrl");
+    if (options.captureError && !logUrl) console.log("❌ 未传递logUrl");
 
     //向后台输送数据
     const insReportData = logUrl

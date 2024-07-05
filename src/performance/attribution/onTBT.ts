@@ -11,7 +11,6 @@ const { tbt, fcp } = metrics;
 // 🟥: 大于0.6s
 
 const cb = (performanceEntries: IPerformanceEntry[]) => {
-  // console.log("🍌", performanceEntries);
   performanceEntries.forEach((entry) => {
     //从fcp -> tti获取长耗时任务（self表示耗时长任务来自于渲染帧）
     if (entry.name !== "self" || entry.startTime < fcp.value) {

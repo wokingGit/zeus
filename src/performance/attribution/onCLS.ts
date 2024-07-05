@@ -12,7 +12,6 @@ const { cls } = metrics;
 
 const cb = (performanceEntries: IPerformanceEntry[]) => {
   const lastEntry = performanceEntries.pop();
-  console.log("cls", lastEntry);
   // Only count layout shifts without recent user input.
   if (lastEntry && !lastEntry.hadRecentInput && lastEntry.value) {
     cls.value += lastEntry.value;

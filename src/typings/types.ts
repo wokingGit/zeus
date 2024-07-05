@@ -70,7 +70,7 @@ export interface IReportData {
  * @param isElementTiming - 是否开启性能数据
  * @param analyticsTracker - 自定义分析工具
  * @param analyticsTracker - void方法参数
- * @param maxTime - 最大请求时间
+ * @param maxTime - 最大测量时间
  * @interface 系统配置接口
  * @public
  */
