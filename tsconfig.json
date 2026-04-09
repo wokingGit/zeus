@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "strict": true,
+    "rootDir": "./src",
     "outDir": "./dist",
     "declaration": true,
     "declarationMap": true,
@@ -8,7 +10,7 @@
     "target": "ESNext",
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,

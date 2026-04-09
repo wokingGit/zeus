@@ -15,7 +15,7 @@ import { getNetworkInformation } from "./helpers/getNetworkInformation";
 import { IReportData, ZeusOptions } from "./typings/types";
 
 export default class Zeus {
-  private v = "1.1.0";
+  private v = "1.1.3";
   private reportData: IReportData | null;
 
   constructor(options: ZeusOptions = {}) {
@@ -45,8 +45,8 @@ export default class Zeus {
     // 开启错误跟踪
     if (config.captureError) {
       console.log("⏰ 全局捕获错误开启!");
-      const errorTtace = new ErrorTrace();
-      errorTtace.run();
+      const errorTrace = new ErrorTrace();
+      errorTrace.run();
     }
 
     //如果浏览器不支持性能指标只能放弃
